@@ -24,3 +24,25 @@ export interface BusinessLead {
   score: number;
   status: LeadStatus;
 }
+
+// ─── Reddit Lead Source ─────────────────────────────────────────────────────
+
+export interface RedditLead {
+  id: string;
+  username: string;
+  subreddit: string;
+  title: string;
+  postUrl: string;
+  createdAt: string;        // ISO timestamp
+  upvotes: number;
+  aiScore: number;          // 0–100
+  reason: string;           // Human-readable explanation of score
+  suggestedService: string; // e.g. "Landing Page", "E-commerce Site"
+  saved: boolean;
+  selftext?: string;        // Post body text (may be empty)
+}
+
+// ─── Future Lead Sources (placeholder types for extensibility) ─────────────
+
+// export interface TwitterLead { ... }
+// export interface LinkedInLead { ... }
